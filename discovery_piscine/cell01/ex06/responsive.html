@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table Example</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            width: 100vw;
+            height: 100vh;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 2vw; /* Adjusts padding responsively */
+            text-align: center;
+            font-size: 2vw; /* Responsive font size */
+        }
+
+        .first-cell {
+            background-color: black;
+            color: white;
+        }
+
+        .second-cell {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="first-cell">First cell</td>
+            <td class="second-cell">Second cell</td>
+        </tr>
+    </table>
+
+</body>
+</html>
