@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 100px;
-    transition: background-color 0.5s ease;  /* Smooth background transition */
+    transition: background-color 0.5s ease;
 }
 
 button {
