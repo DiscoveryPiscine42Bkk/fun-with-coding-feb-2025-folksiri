@@ -1,4 +1,3 @@
-// Function to load stored todos from cookies
 function loadTodos() {
     let ftList = document.getElementById("ft_list");
     let savedTodos = getCookie("todos");
@@ -8,8 +7,6 @@ function loadTodos() {
         todos.reverse().forEach(todo => addTodoElement(todo));
     }
 }
-
-// Function to add a new To-Do
 function addTodo() {
     let task = prompt("Enter a new TO DO:");
     if (task) {
@@ -17,8 +14,6 @@ function addTodo() {
         saveTodos();
     }
 }
-
-// Function to add a To-Do element to the DOM
 function addTodoElement(task) {
     let ftList = document.getElementById("ft_list");
     let div = document.createElement("div");
@@ -34,8 +29,6 @@ function addTodoElement(task) {
 
     ftList.insertBefore(div, ftList.firstChild);
 }
-
-// Function to save the To-Do list in cookies
 function saveTodos() {
     let todos = [];
     document.querySelectorAll(".todo").forEach(todo => {
@@ -43,8 +36,6 @@ function saveTodos() {
     });
     setCookie("todos", JSON.stringify(todos), 7);
 }
-
-// Function to set a cookie
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -54,8 +45,6 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + value + expires + "; path=/";
 }
-
-// Function to get a cookie
 function getCookie(name) {
     let nameEQ = name + "=";
     let cookies = document.cookie.split(';');
@@ -65,6 +54,4 @@ function getCookie(name) {
     }
     return null;
 }
-
-// Load todos when the page loads
 window.onload = loadTodos;
