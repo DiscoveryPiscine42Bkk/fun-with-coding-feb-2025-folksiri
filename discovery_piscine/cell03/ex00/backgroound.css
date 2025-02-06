@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 100px;
+    transition: background-color 0.5s ease;  /* Smooth background transition */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
